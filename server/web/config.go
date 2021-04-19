@@ -295,6 +295,7 @@ func parseConfig(appConfigPath string) (err error) {
 	if err != nil {
 		return err
 	}
+	defer logs.Info("load config file is %s", appConfigPath)
 	return assignConfig(AppConfig)
 }
 
